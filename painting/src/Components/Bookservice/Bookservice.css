@@ -1,0 +1,492 @@
+/* Main Container Styles */
+.book-service-container {
+  min-height: 100vh;
+  transition: background-color 0.3s ease;
+  font-family: 'Arial', sans-serif;
+}
+
+.book-service-content {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Form Section Styles */
+.book-service {
+  flex: 1;
+  padding: 60px 0;
+  transition: color 0.3s ease;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  color:#000;
+
+}
+
+.service-form {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Form Element Styles */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #444;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #1a3e72;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* File Upload Styles */
+.file-upload {
+  margin-bottom: 10px;
+}
+
+.file-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.file-input-wrapper input[type="file"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 0.1px;
+  height: 0.1px;
+}
+
+.file-label {
+  padding: 12px 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 15px;
+  transition: all 0.3s;
+}
+
+.file-label:hover {
+  background-color: #e0e0e0;
+}
+
+.file-name {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Checkbox Styles */
+.checkbox-group {
+  margin: 15px 0;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  padding-left: 30px;
+}
+
+.checkbox-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.checkbox-label:hover input ~ .checkmark {
+  background-color: #e0e0e0;
+}
+
+.checkbox-label input:checked ~ .checkmark {
+  background-color: #1a3e72;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-label .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Service Options Styles */
+.service-options {
+  margin: 20px 0;
+}
+
+.service-options h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 15px;
+}
+
+.option-card {
+  position: relative;
+  cursor: pointer;
+}
+
+.option-card input {
+  position: absolute;
+  opacity: 0;
+}
+
+.option-content {
+  padding: 15px;
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.option-card input:checked + .option-content {
+  background: #1a3e72;
+  color: white;
+  border-color: #1a3e72;
+}
+
+/* Theme Selector Styles */
+/* Theme Selector Styles */
+.theme-selector {
+  width: 300px;
+  padding: 30px;
+  background: white;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.05);
+  border-left: 1px solid #eee;
+}
+
+.theme-selector h3 {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.color-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.color-option {
+  height: 50px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.color-option:hover {
+  transform: scale(1.05);
+}
+
+.custom-option {
+  border: 2px dashed #ccc !important;
+  position: relative;
+}
+
+.custom-label {
+  font-size: 1.5rem;
+  color: #666;
+}
+
+.color-picker-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.color-picker {
+  width: 60px;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.color-value {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.selected-theme-preview {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: #f8f8f8;
+  border-radius: 8px;
+}
+
+.theme-preview {
+  width: 60px;
+  height: 40px;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-accent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 12px;
+}
+
+.theme-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.theme-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.theme-color-code {
+  color: #666;
+  font-size: 0.8rem;
+  font-family: monospace;
+}
+
+/* Add this at the top of your CSS */
+:root {
+  --primary: #1a3e72;
+  --secondary: #f8c537;
+}
+
+/* Update your focus states to use CSS variables */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* Update checkbox checked state */
+.checkbox-label input:checked ~ .checkmark {
+  background-color: var(--primary);
+}
+
+/* Update the submit button to use CSS variables */
+.submit-btn {
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  padding:10px 20px;
+  border-radius: 15px;
+  font-size: 17px;
+
+}
+
+/* Add this to ensure theme variables are applied to the root */
+.book-service-container {
+  --primary: #1a3e72;
+  --secondary: #f8c537;
+}
+
+/* @media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+  
+  .service-form {
+    padding: 25px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .theme-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .theme-options {
+    grid-template-columns: repeat(3, 1fr);
+  }
+} */
+  
+/* ---------- Laptop (1024px and below) ---------- */
+@media (max-width: 1024px) {
+  .book-service-content {
+    max-width: 900px;
+    gap: 20px;
+  }
+
+  .theme-selector {
+    width: 250px;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+}
+
+/* ---------- Tablet (768px and below) ---------- */
+@media (max-width: 768px) {
+  .book-service-content {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .theme-selector {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid #eee;
+    box-shadow: none;
+    margin-top: 20px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .service-form {
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .theme-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---------- Mobile (480px and below) ---------- */
+@media (max-width: 480px) {
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .theme-options {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .theme-selector {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea,
+  select {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+  }
+
+  .submit-btn {
+    font-size: 15px;
+    padding: 8px 16px;
+  }
+}

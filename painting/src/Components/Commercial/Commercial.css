@@ -1,0 +1,128 @@
+ .residential-section {
+  position: relative;
+  background-color: #f8f8f8;
+  overflow: hidden;
+  padding: 190px 20px;
+  text-align: center;
+}
+
+/* Pink wave flipped to bottom right */
+.pink-wave {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  height: 50%;
+  background-color: transparent;
+    /* background-image: radial-gradient(at bottom right, #eee 75%, #a18dce 55%); */
+
+  background-color: #d94f73; /* your pink color */
+  clip-path: ellipse(70% 50% at 100% 100%);
+    /* clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%); */
+  z-index: 0;
+}
+
+/* Splash at top right */
+.paint-splash {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 180px;
+  z-index: 1;
+}
+
+/* Content Styling */
+.residential-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.residential-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color:#000;
+  margin-bottom: 20px;
+}
+
+.residential-content p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color:#333;
+  line-height: 1.6;
+}
+
+.contact-btn {
+  background: black;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.business-section {
+  background-color: #f5f5f5;
+  padding: 60px 20px;
+}
+
+.business-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.business-container.reverse {
+  flex-direction: row-reverse; /* flips image/text positions */
+}
+
+.business-image {
+  flex: 1;
+}
+
+.business-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.business-text {
+  flex: 1;
+}
+
+.business-text h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.business-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .business-container {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Center text for mobile */
+  }
+
+  .business-container.reverse {
+    flex-direction: column; /* Also stack reverse layouts */
+  }
+
+  .business-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .business-text {
+    text-align: center;
+    padding: 10px;
+  }
+}
