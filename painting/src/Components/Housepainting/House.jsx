@@ -83,17 +83,17 @@ const House = () => {
     </p>
   </div>
 </section>
- <section className="services-section">
-      <h2 className="services-title">Our Services</h2>
-      <p className="services-subtitle">
+ <section className="house-section">
+      <h2 className="house-title">Our Services</h2>
+      <p className="house-subtitle">
         We offer a wide variety of professional painting options to perfectly suit every corner of your home:
       </p>
-      <div className="services-grid">
+      <div className="house-grid">
         {services.map((service, index) => (
-          <div className="service-card" key={index}>
-            <img src={service.img} alt={service.title} className="service-icon" />
-            <h3 className="service-heading">{service.title}</h3>
-            <p className="service-description">{service.description}</p>
+          <div className="house-card" key={index}>
+            <img src={service.img} alt={service.title} className="house-icon" />
+            <h3 className="house-heading">{service.title}</h3>
+            <p className="house-description">{service.description}</p>
           </div>
         ))}
       </div>

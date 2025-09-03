@@ -1,0 +1,124 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+.services {
+  text-align: center;
+  width: 100%;
+   max-width: 100vw;
+  background: #fff;
+  color: #111;
+  font-family: Arial, sans-serif;
+  margin-top: 50px;
+  padding: 0;
+}
+
+/* Intro Section */
+.intro {
+  height: 60vh;
+  background: linear-gradient(to right, #fdf6e3, #bbefa5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease-out;
+}
+
+.intro.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.intro h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  max-width: 800px;
+  line-height: 1.3;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+  max-width: 900px;
+}
+
+/* Services Grid */
+.service-grid {
+  max-width: 1000px;
+  margin: auto;
+  padding: 5rem 2rem;
+  display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); */
+  gap: 2rem;
+}
+
+.service-grid a {
+  text-decoration: none; /* removes underline */
+  color: inherit;        /* uses parent text color instead of default blue */
+}
+
+.service-grid a:hover {
+  text-decoration: none; /* keep underline off on hover */
+  color: inherit;        /* prevent hover color change */
+}
+
+.service-card {
+  background: #bbefa5;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateX(200px);
+}
+
+.service-card:nth-child(even) {
+  transform: translateX(-200px);
+}
+
+.service-card.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.icon {
+  font-size: 2.5rem;
+  color: #bfa76f;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .services{
+    padding-top:50px;
+  }
+  .intro h2 {
+    font-size: 2rem;
+  }
+  .service-card,
+  .service-card:nth-child(even) {
+    transform: translateX(0);
+  }
+
+   .service-grid {
+    grid-template-columns: 1fr;
+    padding: 3rem 1rem;
+  }
+}

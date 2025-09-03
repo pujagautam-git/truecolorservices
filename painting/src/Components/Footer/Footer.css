@@ -76,22 +76,63 @@
 .footer-contact p {
   margin: 6px 0;
   font-weight: 520;
+   display: flex;
+  align-items: center;
+  gap: 8px;    
+  font-size: 15px;
+}
+.footer-icon {
+  font-size: 26px;
+  color: #212525; /* or any brand color (green for WhatsApp style, or neutral) */
+  flex-shrink: 0; /* keeps icon from shrinking */
 }
 
 .brush-logo {
-  width: 100px;
-  margin-top: 15px;
+  width: 100%;
+  /* margin-top: 5px; */
 }
-
+.footer-bottom {
+  text-align: center;
+  padding: 15px 0;
+  /* background-color: #1a1a1a; or match your footer color */
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+}
+.footer-bottom span {
+  color: #49c8c8;
+  font-weight: 700;
+}
+.footer-bottom a {
+  color: #00e6d3;
+  text-decoration: none;
+}
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
     text-align: center;
     align-items: center;
+    gap: 25px;
   }
 
   .footer-social {
     justify-content: center;
+  }
+  .footer-col {
+    flex: 1 1 100%;
+  }
+  .footer-contact p {
+    justify-content: center;
+    font-size: 14px;
+  }
+  .footer-icon {
+    font-size: 24px;
+  }
+  .footer-about p {
+    font-size: 15px;
+  }
+  .brush-logo {
+    width: 150px;
   }
 }
 

@@ -1,0 +1,184 @@
+   .wood-hero {
+  position: relative;
+  text-align: center;
+  background: #f9f9f9;
+  overflow: hidden;
+  padding: 250px 20px;
+
+}
+
+.wood-wave-bg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  height: 50%;
+  background-color: transparent;
+  background: #40c8e0;
+   clip-path: ellipse(80% 50% at 100% 100%);
+  /* clip-path: ellipse(70% 100% at 50% 0%); */
+  z-index: 0;
+}
+
+.stain-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.stain-content h1 {
+  font-size: 60px;
+  /* font-weight: 800; */
+  margin-bottom: 20px;
+  color:#000;
+}
+
+.stain-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.btn-stain{
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 28px;
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn-stain:hover {
+  background: #333;
+}
+
+.paint-splash-blue{
+  position: absolute;
+  top: 160px;
+  left: 20px;
+  width: 180px;
+  height: 180px;
+  background: url('../../assets/commercial/4com.png') no-repeat center/cover;
+  z-index: 0;
+}
+
+.woodstain-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 40px;
+  padding: 60px 90px;
+  flex-wrap: wrap;
+}
+
+.woodstain-section.reverse {
+  flex-direction: row;
+}
+
+.woodstain-image,
+.woodstain-text {
+  flex: 1 1 45%; /* side-by-side on large screens */
+}
+
+.woodstain-image img {
+  width: 80%;
+  height: 70vh;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* .woodstain-text {
+  flex: 1 ;
+
+} */
+
+.woodstain-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color:#000;
+}
+
+.woodstain-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+} 
+
+/* ---------------- Responsive Styles ---------------- */
+@media (max-width: 992px) {
+  .wood-hero {
+    padding: 150px 20px;
+  }
+
+  .stain-content h1 {
+    font-size: 40px;
+  }
+  .stain-content p {
+    font-size: 15px;
+  }
+
+  .woodstain-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .woodstain-image,
+  .woodstain-text {
+    flex: 1 1 100%;
+  }
+
+  .woodstain-image img {
+    margin-bottom: 20px;
+    width:100%;
+    height:60vh;
+  }
+
+  .woodstain-text h2 {
+    font-size: 2.3rem;
+  }
+
+  .woodstain-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .wood-hero {
+    padding: 160px 15px;
+  }
+
+  .stain-content h1 {
+    font-size: 28px;
+  }
+
+  .stain-content p {
+    font-size: 14px;
+  }
+
+  .btn-stain {
+    padding: 12px 22px;
+    font-size: 16px;
+  }
+  .woodstain-section {
+     padding: 20px 15px;
+  }
+  .woodstain-text h2 {
+    font-size: 2.1rem;
+  }
+
+  .woodstain-text p {
+    font-size: 1rem;
+  }
+
+  .color-service-grid {
+    grid-template-columns: 1fr; /* 1 card per row on mobile */
+    gap: 15px;
+    padding: 0 10px;
+  }
+}

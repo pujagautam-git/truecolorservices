@@ -64,25 +64,25 @@
   z-index: 0;
 }
 
-.services-section {
+.house-section {
   text-align: center;
   padding: 60px 20px;
 }
 
-.services-title {
+.house-title {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-.services-subtitle {
+.house-subtitle {
   max-width: 700px;
   margin: 0 auto 40px;
   font-size: 1rem;
   color: #555;
 }
 
-.services-grid {
+.house-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
@@ -90,17 +90,17 @@
   margin: 0 auto;
 }
 
-.service-card {
+.house-card {
   text-align: center;
 }
 
-.service-icon {
+.house-icon {
   width: 60px;
   height: auto;
   margin-bottom: 15px;
 }
 
-.service-heading {
+.house-heading {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 10px;
@@ -108,7 +108,7 @@
   color:#000;
 }
 
-.service-description {
+.house-description {
   font-size: 0.95rem;
   color: #666;
   line-height: 1.5;

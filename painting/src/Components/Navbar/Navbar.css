@@ -101,71 +101,6 @@
   transform: translateY(-1px);
 }
 
-/* dropdown caret styling */
-.dropdown-icon {
-  margin-left: 6px;
-  font-size: 12px;
-}
-
-/* ---------- Services dropdown ---------- */
-.services-dropdown-full {
-  position: absolute;
-  top: 100%;
-  left: 200px;
-  color: #000;
-  transform: translateX(-50%);
-  width: min(100vw, 1200px);
-  background: #a2ee9b,;
-  background-image: linear-gradient(to right, #73c96b, #d5d0d0);
-  border-radius: 12px;
-  padding: 25px 35px;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
-  z-index: 999;
-  cursor:pointer;
-}
-
-.services-inner {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 2 commercial + 2 residential + 1 image */
-  gap: 20px;
-  align-items: flex-start;
-}
-
-.services-column h4 {
-  margin-bottom: 10px;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.services-column ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  margin: 0;
-}
-
-.services-column li {
-  padding: 4px 0;
-  font-size: 15px;
-  cursor: pointer;
-}
-
-.image-column img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-/* @media (max-width: 992px) {
-  .services-inner {
-    grid-template-columns: 1fr 1fr;
-  }
-  .image-column {
-    display: none;
-  }
-} */
 
 /* small divider if needed */
 .divider { width: 1px; background: rgba(0,0,0,0.06); }
@@ -177,7 +112,7 @@
   padding: 10px 18px;
   border-radius: 28px;
   font-weight: 600;
-  font-size: 19px;
+  font-size: 16px;
   cursor: pointer;
 }
 .nav-btn.callus :hover{
@@ -191,23 +126,85 @@
   font-size: 24px;
   cursor: pointer;
 }
-
-/* ---------- Responsive / Mobile ---------- */
-@media (max-width: 992px) {
-  .services-inner { grid-template-columns: repeat(2, 1fr);}
-  .services-dropdown-full{
-    background-color: #fff;
-  } 
-    .image-column { display: none; }
+.desktop-call {
+  display: inline-block;
 }
+.mobile-call {
+  display: none;
+}
+
+.mobile-whatsapp {
+  display: none; /* hidden by default */
+}
+.mobile-call a,
+.mobile-whatsapp a
+ {
+  text-decoration: none; /* removes underline */
+  color: inherit;        /* inherit text color */
+}
+.mobile-whatsapp .whatsapp-btn {
+  background: #25D366;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.mobile-whatsapp .whatsapp-icon {
+  font-size: 20px;
+}
+/* Call + WhatsApp stack */
+.contact-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center; /* keeps them aligned right on desktop */
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+  background: #25D366;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 15px;
+  border: none;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.desktop-whatsapp,
+.desktop-whatsapp:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.whatsapp-btn .whatsapp-icon {
+  font-size: 20px;
+}
+
 
 @media (max-width: 768px) {
   /* show hamburger, hide inline call button if you prefer */
   .hamburger { display: block; }
-  .nav-btn.callus { display: none; }
+  /* .nav-btn.callus { display: none; }
+   */
   
-  
-  
+   .nav-logo {
+    height: 80px;   /* smaller height */
+    margin-left: -40px;  /* shift slightly left */
+  }
+
+  /* Adjust top-row padding if needed */
+  .top-row {
+    padding: 0 10px;
+  }
   .nav-button:hover {
   color: #135e12; /* or choose any color */
   transform: translateY(-1px);
@@ -240,14 +237,41 @@
     width: 100%;
   }
 
-  .services-dropdown-full {
-    position: static;
-    transform: none;
+ /* .nav-right {
+    display: none;  
+   
+  } */
+
+  /* .nav-btn.callus {
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 6px;
+  } */
+  /* Hide desktop call button */
+  .desktop-call, .desktop-whatsapp {
+    display: none;
+  }
+
+  /* Show mobile call button in dropdown menu */
+  .mobile-call {
+    display: block;
     width: 100%;
-    box-shadow: none;
-    padding: 14px;
-    border-radius: 8px;
-    background-color: #fff;
- 
+    margin-top: 10px;
+  }
+
+  .mobile-call .nav-btn.callus {
+    width: 100%;
+    padding: 5px 0;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 550;
+    text-align: center;
+  }
+  .desktop-actions {
+    display: none;
+  }
+  .mobile-whatsapp {
+    display: block;
+    margin-top: 10px;
   }
 }

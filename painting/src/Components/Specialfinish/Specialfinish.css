@@ -1,0 +1,240 @@
+  .specialhome-hero {
+  position: relative;
+  text-align: center;
+  background: #f9f9f9;
+  overflow: hidden;
+  padding: 250px 20px;
+
+}
+
+.specialhome-wave-bg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  height: 50%;
+  background-color: transparent;
+  background: #bf3263;
+   clip-path: ellipse(80% 50% at 100% 100%);
+  /* clip-path: ellipse(70% 100% at 50% 0%); */
+  z-index: 0;
+}
+
+.special-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.special-content h1 {
+  font-size: 60px;
+  /* font-weight: 800; */
+  margin-bottom: 20px;
+  color:#000;
+}
+
+.special-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.btn-special{
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 28px;
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn-special:hover {
+  background: #333;
+}
+
+.paint-splash-blue {
+  position: absolute;
+  top: 160px;
+  left: 20px;
+  width: 180px;
+  height: 180px;
+  background: url('../../assets/commercial/6com.png') no-repeat center/cover;
+  z-index: 0;
+}
+
+.specialhome-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 40px;
+  padding: 60px 90px;
+  flex-wrap: wrap;
+}
+
+.specialhome-section.reverse {
+  flex-direction: row;
+}
+  .specialhome-image,
+  .specialhome-text {
+    flex: 1 1 45%; /* full width on smaller screens */
+  }
+/* .specialhome-image {
+  flex: 1;
+} */
+
+.specialhome-image img {
+  width: 90%;
+  height: 60vh;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* .specialhome-text {
+  flex: 1 ;
+
+} */
+
+.specialhome-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color:#000;
+}
+
+.specialhome-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+} 
+
+.color-card-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fff;
+  color: #111;
+  font-family: "Poppins", sans-serif;
+}
+
+.color-card-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.color-card-section .color-subtitle {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.color-service-grid {
+  display: grid;
+  /* max-width:600px; */
+  padding: 0 60px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.color-service-card {
+  text-decoration: none; /* removes underline */
+  color: inherit;        /* removes blue link */
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.color-service-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.color-service-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.color-service-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.color-service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+@media (max-width: 992px) {
+  .specialhome-section {
+    flex-direction: column; /* stack image and text vertically */
+    text-align: center;
+    gap: 30px;
+  }
+
+  .specialhome-image,
+  .specialhome-text {
+    flex: 1 1 100%; /* full width on smaller screens */
+  }
+
+  .specialhome-image img {
+    margin-bottom: 20px;
+  }
+
+  .specialhome-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .specialhome-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .color-service-grid {
+    grid-template-columns: 1fr; /* 1 card per row */
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .specialhome-hero {
+    padding: 160px 15px;
+  }
+
+  .special-content h1 {
+    font-size: 28px;
+  }
+
+  .special-content p {
+    font-size: 14px;
+  }
+
+  .btn-special {
+    padding: 12px 22px;
+    font-size: 16px;
+  }
+  .paint-splash-purple {
+    width:120px;
+    height:120px;
+  }
+    .specialhome-section {
+     padding: 20px 15px;
+  }
+
+  .specialhome-text h2 {
+    font-size: 2.1rem;
+  }
+
+  .specialhome-text p {
+    font-size: 0.95rem;
+  }
+}

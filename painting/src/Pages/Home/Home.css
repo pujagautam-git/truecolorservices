@@ -87,19 +87,19 @@
     max-width: 85%;
     height: auto;
 }
-.services-section {
+.comer-section {
     text-align: center;
     padding: 50px 20px;
   
 }
 
-.services-section h2 {
+.comer-section h2 {
     font-size: 40px;
     margin-bottom: 10px;
     color:#000;
 }
 
-.services-section p {
+.comer-section p {
     color: #7a7a7a;
     max-width: 900px;
     margin: 0 auto 30px;
@@ -163,31 +163,31 @@
   font-size: 1.5rem;
   margin: 40px 0;
 }
-.services-grid {
+.comer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 30px;
   margin-top: 30px;
 }
 
-.service-card {
+.comer-card {
   text-align: center;
   padding: 20px;
 }
 
-.service-card img {
+.comer-card img {
   width: 200px;
   height: 150px;
   margin-bottom: 15px;
 }
 
-.service-card h4 {
+.comer-card h4 {
   font-size: 1.2rem;
   margin-bottom: 10px;
   color:#000;
 }
 
-.service-card p {
+.comer-card p {
   font-size: 0.95rem;
   color: #666;
 }
@@ -449,6 +449,62 @@ display: grid;
   line-height: 1.6;
   font-size: 16px;
 }
+.reviews-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 700px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.reviews-heading {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+.reviews-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.google-logo {
+  height: 40px;
+  width:40px;
+}
+
+.star-rating {
+  display: flex;
+  gap: 5px;
+}
+
+.star-icon {
+  width: 28px;
+  height: 28px;
+  color: #fbbc05; /* Google yellow */
+}
+
+.review-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #4285f4; /* Google blue */
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.review-btn:hover {
+  background: #3367d6;
+}
+
 
 /* Responsive adjustments */
 /* @media (max-width: 768px) {
@@ -475,7 +531,8 @@ display: grid;
 }
 
  */
-/* -------------------- Laptop (1024px and below) -------------------- */
+
+ /* -------------------- Laptop (1024px and below) -------------------- */
 @media (max-width: 1024px) {
   .hero-content-value h1 {
     font-size: 48px;
@@ -504,7 +561,7 @@ display: grid;
   .hero-value {
     flex-direction: column;
     text-align: center;
-    padding: 250px 5%;
+    padding: 130px 5%;
   }
 
   .hero-content-value {
@@ -512,7 +569,7 @@ display: grid;
   }
 
   .hero-content-value h1 {
-    font-size: 36px;
+    font-size: 39px;
     text-align: center;
   }
 

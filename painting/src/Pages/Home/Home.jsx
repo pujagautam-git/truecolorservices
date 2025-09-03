@@ -1,7 +1,10 @@
  import React,{useState,useEffect} from 'react'
  import { Link } from "react-router-dom";
+ import { FaHammer } from "react-icons/fa"; // Hipages-style icon (hammer as brand
  import { FaEnvelope,  FaMapMarkerAlt,FaPhoneAlt} from "react-icons/fa";
-
+// import googleLogo from "./google-logo.png"; 
+import { FcGoogle } from "react-icons/fc";
+import Services from '../Services/Services';
  import afford from "../../assets/Home/afrod.png"
 import comer1 from "../../assets/commercial/1com.png"
 import comer2 from "../../assets/commercial/2com.png"
@@ -32,7 +35,7 @@ import Testimonials from '../../Components/Testimonial/Testimonial';
 import Quickpaint from "../../Components/Quickpaint/Quickpaint";
 import Bookservice from "../../Components/Bookservice/Bookservice";
 import ContactDetails from "../../Components/Contactdetails/ContactDetails";
-
+import HipagesReviews from '../../Components/hipage/hipage';
 import "./Home.css";
 
  
@@ -145,7 +148,7 @@ import "./Home.css";
 const cards = [
   {
     title: "Sydney-Trained",
-    desc: "Our painters inAustralia train 200+ hours in specific techniques like heat-resistant coatings and sand-proof finishes that give lasting results.",
+    desc: "Our painters in Australia train 200+ hours in specific techniques like heat-resistant coatings and sand-proof finishes that give lasting results.",
     bgColor: "#d9414f",
     textColor: "#fff",
     img: null,
@@ -243,7 +246,7 @@ const cards = [
 </section>
 <section className="afford-section">
   <div className="afford-text">
-    <h1>Affordable Painting Services in Australia</h1>
+    <h1>Affordable Painting Services in Sydney</h1>
     <h3>Ready to Serve You 24/7, Anytime, Anywhere</h3>
     <p>
      Sydney’s coastal climate brings its own challenges — from harsh 
@@ -258,7 +261,8 @@ const cards = [
   </div>
 </section>
 
- <section className="services-section">
+
+ {/* <section className="comer-section">
       <h2>Our Services</h2>
       <p>
         At True colour Services, we offer a wide range of professional
@@ -279,10 +283,10 @@ const cards = [
         >
           Residential Painting
         </button>
-      </div>
+      </div> */}
 
       {/* Commercial Tab */}
-      {activeTab === "commercial" && (
+      {/* {activeTab === "commercial" && (
         <div className="tab-content active">
           <h3>Commercial Painting</h3>
           <p>
@@ -290,9 +294,9 @@ const cards = [
             hotels, and retail spaces, with durable coatings that withstand high
             traffic and maintain brand prestige.
           </p>
-          <div className="services-grid">
+          <div className="comer-grid">
             {commercialServices.map((service, index) => (
-              <div key={index} className="service-card">
+              <div key={index} className="comer-card">
                 <img src={service.img} alt={service.title} />
                 <h4>{service.title}</h4>
                 <p>{service.desc}</p>
@@ -303,19 +307,19 @@ const cards = [
             VIEW ALL SERVICES
           </Link>
         </div>
-      )}
+      )} */}
 
       {/* Residential Tab */}
-      {activeTab === "residential" && (
+      {/* {activeTab === "residential" && (
         <div className="tab-content active">
           <h3>Residential Painting</h3>
           <p>
             From living rooms to bedrooms, we bring your home to life with
             colors and finishes that reflect your personality.
           </p>
-          <div className="services-grid">
+          <div className="comer-grid">
             {residentialServices.map((service, index) => (
-              <div key={index} className="service-card">
+              <div key={index} className="comer-card">
                 <img src={service.img} alt={service.title} />
                 <h4>{service.title}</h4>
                 <p>{service.desc}</p>
@@ -328,7 +332,8 @@ const cards = [
           </Link>
         </div>
       )}
-    </section>
+    </section> */}
+    <Services/>
       <section className="painting-process">
       {/* Gradient Header */}
       <div className="process-header">
@@ -390,9 +395,9 @@ const cards = [
       <div className="container">
         <h2>Why Homeowners and Businesses Choose Us</h2>
         <p className="intro-text">
-          When you choose a painting company inAustralia, we bet you will not be just looking for affordable prices. 
+          When you choose a painting company in Australia, we bet you will not be just looking for affordable prices. 
           It is about trust, reliability, and knowing the job will be done right. Here's why so many homeowners, 
-          businessmen, and villa owners acrossAustralia choose us again and again:
+          businessmen, and villa owners across Australia choose us again and again:
         </p>
 
         <div className="features-grid">
@@ -459,9 +464,45 @@ const cards = [
         </div>
       </div>
     </section>
+    
+     <section className="reviews-section">
+      <h2 className="reviews-heading">Our Customer Reviews on Google</h2>
+
+      <div className="reviews-brand">
+        <FcGoogle className="google-logo" />
+
+        {/* SVG Stars */}
+        <div className="star-rating">
+          {[...Array(5)].map((_, i) => (
+            <svg
+              key={i}
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="star-icon"
+            >
+              <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.782 1.402 8.174L12 18.896l-7.336 3.857 
+              1.402-8.174-5.934-5.782 8.2-1.193z" />
+            </svg>
+          ))}
+        </div>
+      </div>
+
+      <a
+        // href="https://hipages.com.au/connect/truecolourservicesptyltd"
+       href="https://share.google/gTADLWBn0afyRjkgr"   
+        target="_blank"
+        rel="noopener noreferrer"
+        className="review-btn"
+      >
+        View Reviews
+      </a>
+    </section>
+
     <Testimonials/>
     <Quickpaint/>
     <Bookservice/>
+    <HipagesReviews/>
     <ContactDetails/>
 
  {/* <section className="contact-section">

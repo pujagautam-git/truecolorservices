@@ -1,0 +1,51 @@
+ .hipages-reviews-section {
+  text-align: center;
+  padding: 40px 20px;
+  background: #fff7f2; /* light background different from Google */
+}
+
+.hipages-reviews-heading {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.hipages-reviews-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.hipages-logo {
+  font-size: 40px;
+  color: #ff6600; /* Hipages orange */
+  margin-right: 10px;
+}
+
+.hipages-star-rating {
+  display: flex;
+}
+
+.hipages-star-icon {
+  width: 22px;
+  height: 22px;
+  color: #ffb400; /* gold stars */
+  margin: 0 2px;
+}
+
+.hipages-review-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 18px;
+  background-color: #ff6600;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.hipages-review-btn:hover {
+  background-color: #e65500;
+}

@@ -45,6 +45,15 @@
   background-color: #059898;
 }
 
+.contact-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact-link:hover {
+  color: #25D366; /* or theme color */
+}
+
 /* ---------- Tablet (768px and below) ---------- */
 @media (max-width: 768px) {
   .contact-section {

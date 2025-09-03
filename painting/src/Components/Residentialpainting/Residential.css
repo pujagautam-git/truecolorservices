@@ -1,0 +1,255 @@
+ .residential-section {
+  position: relative;
+  background-color: #f8f8f8;
+  overflow: hidden;
+  padding: 190px 20px;
+  text-align: center;
+}
+
+/* Pink wave flipped to bottom right */
+.blue-wave {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  height: 50%;
+  background-color: transparent;
+    /* background-image: radial-gradient(at bottom right, #eee 75%, #a18dce 55%); */
+
+  background-color: #3ca231; /* your pink color */
+  clip-path: ellipse(90% 60% at 100% 100%);
+    /* clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%); */
+  z-index: 0;
+}
+
+/* Splash at top right */
+.blue-splash {
+  position: absolute;
+  top: 130px;
+  left: 0;
+  width: 180px;
+  z-index: 1;
+}
+
+/* Content Styling */
+.residential-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.residential-content h1 {
+  font-size: 60px;
+  font-weight: bold;
+  color:#000;
+  margin-bottom: 20px;
+}
+
+.residential-content p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color:#333;
+  line-height: 1.5;
+} 
+
+.contact-btn-value {
+  background: black;
+  color: white;
+  padding: 16px 30px;
+  font-size: 18px;
+  border-radius: 30px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.house-section {
+  background-color: #f5f5f5;
+  padding: 60px 20px;
+}
+
+.house-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.house-container.reverse {
+  flex-direction: row-reverse; /* flips image/text positions */
+}
+.house-image,
+.house-text {
+  flex: 1 1 45%; /* flex-grow:1, flex-shrink:1, flex-basis:45% */
+}
+
+/* .house-image {
+  flex: 1;
+} */
+
+.house-image img {
+  width: 90%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* .house-text {
+  flex: 1;
+} */
+
+.house-text h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.house-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.residential-card-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fff;
+  color: #111;
+  font-family: "Poppins", sans-serif;
+}
+
+.residential-card-section h2 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.residential-card-section .res-subtitle {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.res-service-grid {
+  display: grid;
+  /* max-width:600px; */
+  padding: 0 60px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.res-service-card {
+  text-decoration: none; /* removes underline */
+  color: inherit;        /* removes blue link */
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.res-service-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.res-service-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.res-service-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.res-service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Large laptops */
+@media (max-width: 1200px) {
+  .residential-content h1 {
+    font-size: 48px;
+  }
+  .house-text h2 {
+    font-size: 1.8rem;
+  }
+  .res-service-card h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .residential-section {
+    padding: 190px 20px;
+  }
+  .residential-content h1 {
+    font-size: 40px;
+  }
+  .residential-content p {
+    font-size: 15px;
+  }
+  .house-container {
+    flex-direction: column; /* stack image/text */
+    text-align: center;
+    gap: 30px;
+  }
+  .house-image, 
+  .house-text {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+  .house-image img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .house-text h2 {
+    font-size: 1.6rem;
+  }
+  .house-text p {
+    font-size: 1rem;
+  }
+  .res-service-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    padding: 0 20px;
+    gap: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .residential-section {
+    padding: 160px 15px;
+  }
+  .residential-content h1 {
+    font-size: 28px;
+  }
+  .residential-content p {
+    font-size: 14px;
+  }
+  .contact-btn-value {
+    padding: 12px 22px;
+    font-size: 16px;
+  }
+  .house-text h2 {
+    font-size: 1.4rem;
+  }
+  .house-text p {
+    font-size: 0.95rem;
+  }
+  .res-service-grid {
+    grid-template-columns: 1fr; /* 1 card per row */
+    gap: 15px;
+    padding: 0 10px;
+  }
+}

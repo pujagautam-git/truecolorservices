@@ -1,4 +1,4 @@
- .residential-section {
+ .commercial-section {
   position: relative;
   background-color: #f8f8f8;
   overflow: hidden;
@@ -16,7 +16,7 @@
   background-color: transparent;
     /* background-image: radial-gradient(at bottom right, #eee 75%, #a18dce 55%); */
 
-  background-color: #d94f73; /* your pink color */
+  background-color: #e98ca5; /* your pink color */
   clip-path: ellipse(70% 50% at 100% 100%);
     /* clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%); */
   z-index: 0;
@@ -25,38 +25,40 @@
 /* Splash at top right */
 .paint-splash {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 180px;
+  top: 130px;
+  left: 0;
+  width: 150px;
+  height:150px;
   z-index: 1;
 }
 
 /* Content Styling */
-.residential-content {
+.commercial-content {
   position: relative;
   z-index: 2;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
-.residential-content h1 {
-  font-size: 2.5rem;
+.commercial-content h1 {
+  font-size: 60px;
   font-weight: bold;
   color:#000;
   margin-bottom: 20px;
 }
 
-.residential-content p {
-  font-size: 1.1rem;
+.commercial-content p {
+  font-size: 16px;
   margin-bottom: 30px;
   color:#333;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .contact-btn {
   background: black;
   color: white;
-  padding: 12px 30px;
+  padding: 16px 30px;
+  font-size: 18px;
   border-radius: 30px;
   font-weight: bold;
   border: none;
@@ -75,25 +77,29 @@
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .business-container.reverse {
   flex-direction: row-reverse; /* flips image/text positions */
 }
-
-.business-image {
-  flex: 1;
+.business-image,
+.business-text {
+  flex: 1 1 45%; /* side-by-side on large screens, flexible */
 }
+/* .business-image {
+  flex: 1;
+} */
 
 .business-image img {
-  width: 100%;
-  height: auto;
+  width: 90%;
+  height: 60vh;
   border-radius: 8px;
 }
 
-.business-text {
+/* .business-text {
   flex: 1;
-}
+} */
 
 .business-text h2 {
   font-size: 2rem;
@@ -105,24 +111,133 @@
   font-size: 1.1rem;
   line-height: 1.6;
 }
+.commercial-card-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fff;
+  color: #111;
+  font-family: "Poppins", sans-serif;
+}
 
-@media (max-width: 768px) {
-  .business-container {
-    flex-direction: column; /* Stack items vertically */
-    text-align: center; /* Center text for mobile */
+.commercial-card-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.commercial-card-section .com-subtitle {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.com-service-grid {
+  display: grid;
+  /* max-width:600px; */
+  padding: 0 60px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.com-service-card {
+  text-decoration: none; /* removes underline */
+  color: inherit;        /* removes blue link */
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.com-service-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.com-service-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.com-service-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.com-service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+
+/* Laptops & Large screens */
+@media (max-width: 1200px) {
+  .commercial-content h1 {
+    font-size: 48px;
   }
-
-  .business-container.reverse {
-    flex-direction: column; /* Also stack reverse layouts */
+  .business-text h2 {
+    font-size: 1.8rem;
   }
+}
 
-  .business-image img {
-    max-width: 100%;
-    height: auto;
+/* Tablets */
+@media (max-width: 992px) {
+  .commercial-section {
+    padding: 150px 20px;
   }
+  .commercial-content h1 {
+    font-size: 40px;
+  }
+  .commercial-content p {
+    font-size: 15px;
+  }
+  .business-image,
+.business-text {
+  flex: 1 1 100%; /* side-by-side on large screens, flexible */
+text-align: center;
+}
+  .business-text h2 {
+    font-size: 1.6rem;
+  }
+  .business-text p {
+    font-size: 1rem;
+  }
+  .com-service-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    padding: 0 20px;
+    gap: 20px;
+  }
+}
 
-  .business-text {
-    text-align: center;
-    padding: 10px;
+/* Mobile */
+@media (max-width: 576px) {
+  .commercial-section {
+    padding: 150px 15px;
+  }
+  .commercial-content h1 {
+    font-size: 28px;
+  }
+  .commercial-content p {
+    font-size: 14px;
+  }
+  .contact-btn {
+    padding: 12px 22px;
+    font-size: 16px;
+  }
+  .business-text h2 {
+    font-size: 1.4rem;
+  }
+  .business-text p {
+    font-size: 0.95rem;
+  }
+  .com-service-grid {
+    grid-template-columns: 1fr; /* 1 card per row */
+    gap: 15px;
+    padding: 0 10px;
   }
 }

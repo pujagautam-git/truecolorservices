@@ -1,0 +1,270 @@
+ .color-hero {
+  position: relative;
+  text-align: center;
+  background: #f9f9f9;
+  overflow: hidden;
+  padding: 250px 20px;
+
+}
+
+.color-wave-bg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  height: 50%;
+  background-color: transparent;
+  background: #c22525;
+   clip-path: ellipse(80% 50% at 100% 100%);
+  /* clip-path: ellipse(70% 100% at 50% 0%); */
+  z-index: 0;
+}
+
+.bond-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.bond-content h1 {
+  font-size: 60px;
+  /* font-weight: 800; */
+  margin-bottom: 20px;
+  color:#000;
+}
+
+.bond-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.btn-bond {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 28px;
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn-bond:hover {
+  background: #333;
+}
+
+.paint-splash-red {
+  position: absolute;
+  top: 160px;
+  left: 20px;
+  width: 180px;
+  height: 180px;
+  background: url('../../assets/commercial/2com.png') no-repeat center/cover;
+  z-index: 0;
+}
+
+.colorbond-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 40px;
+  padding: 60px 90px;
+  flex-wrap: wrap;
+}
+
+.colorbond-section.reverse {
+  flex-direction: row;
+}
+.colorbond-image,
+.colorbond-text {
+  flex: 1 1 45%; /* side-by-side on large screens, flexible */
+}
+
+/* .colorbond-image {
+  flex: 1;
+} */
+
+.colorbond-image img {
+  width: 90%;
+  height: 50vh;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* .colorbond-text {
+  flex: 1 ;
+
+} */
+
+.colorbond-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color:#000;
+}
+
+.colorbond-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+} 
+
+.color-card-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fff;
+  color: #111;
+  font-family: "Poppins", sans-serif;
+}
+
+.color-card-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.color-card-section .color-subtitle {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.color-service-grid {
+  display: grid;
+  max-width:1200px;
+  padding: 0;
+  grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  justify-content: center;
+  margin: 0 auto;
+  /* align-items: stretch; */
+}
+
+.color-service-card {
+  text-decoration: none; /* removes underline */
+  color: inherit;        /* removes blue link */
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* .color-service-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 20px;
+} */
+
+.color-service-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.color-service-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.color-service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* ---------------- Responsive Styles ---------------- */
+@media (max-width: 1200px) {
+  .bond-content h1 {
+    font-size: 48px;
+  }
+  .colorbond-text h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .color-hero {
+    padding: 150px 20px;
+  }
+
+  .bond-content h1 {
+    font-size: 40px;
+  }
+  .bond-content p {
+    font-size: 15px;
+  }
+
+  .colorbond-section {
+    flex-direction: column; /* stack items vertically */
+    text-align: center;
+    gap: 30px;
+  }
+
+  .colorbond-image,
+  .colorbond-text {
+    flex: 1 1 100%; /* full width on smaller screens */
+  }
+
+  .colorbond-image img {
+    margin-bottom: 20px; /* space between image and text */
+  }
+
+  .colorbond-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .colorbond-text p {
+    font-size: 1rem;
+  }
+
+  .color-service-grid {
+
+    padding: 0 20px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .color-hero {
+    padding: 150px 15px;
+  }
+
+  .bond-content h1 {
+    font-size: 28px;
+  }
+
+  .bond-content p {
+    font-size: 14px;
+  }
+
+  .btn-bond {
+    padding: 12px 22px;
+    font-size: 16px;
+  }
+  .paint-splash-red {
+    width:100px;
+    height:100px;
+  }
+
+    .colorbond-section {
+     padding: 20px 15px;
+  }
+
+  .colorbond-text h2 {
+    font-size: 2rem;
+  }
+
+  .colorbond-text p {
+    font-size: 1rem;
+  }
+
+  .color-service-grid {
+    grid-template-columns: 1fr; 
+    gap: 15px;
+    padding: 0 10px;
+  }
+}

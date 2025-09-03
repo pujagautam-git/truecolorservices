@@ -96,6 +96,16 @@
 .dot.active {
   background: #333;
 }
+.stars {
+  margin: 8px 0;
+  font-size: 20px;
+  color: #ccc;
+}
+
+.star.filled {
+  color: #fbbf24; /* gold/yellow */
+}
+
 
 /* Responsive adjustments */
 /* @media (max-width: 992px) {

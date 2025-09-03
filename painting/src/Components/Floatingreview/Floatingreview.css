@@ -1,0 +1,19 @@
+ .floating-review-btn {
+  position: fixed;
+  left: 20px;         /* distance from left side */
+  bottom: 20px;       /* distance from bottom (can use top:20px for top-left corner) */
+  background: #40c8e0;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  z-index: 1000;      /* keeps it above other content */
+}
+
+.floating-review-btn:hover {
+  background: #2aa9c2;
+  transform: scale(1.05);
+}
